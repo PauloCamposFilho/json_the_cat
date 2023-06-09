@@ -10,7 +10,7 @@ const fetchBreedDescription = (breedName, callback) => {
       if (responseObject.length > 0) {
         callback(null, responseObject[0].description);
       } else {
-        console.log("The query returned no results");
+        callback("No results found.", null);
       }
     }
   });
